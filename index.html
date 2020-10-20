@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Astral Transportes | Rastreamento</title>
+</head>
+<body style='display: none'>
+  <style>
+    body {
+      font-family: tahoma;
+    }
+
+    table {
+      font-family: verdana;
+      font-size: 10px;
+    }
+
+    h4 {
+      font-family: verdana;
+      font-size: 11px;
+    }
+
+    table, td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+    #details {
+      display: none;
+    }
+  </style>
+  <img src="logo.gif" width='150'>
+  <h4>Dados do Pedido</h2>
+  <pre style='font-family: sans-serif; font-size: 9px'>
+    João Marcelo Gonçalves Lima
+    Avenida dos Andradas, 150
+    Vila Assunção - Santo André, SP
+    CEP: 09030-350
+    https://www.submarino.com.br/produto/1657365389/iphone-se-64-gb-preto-4-7-ios-13-4g-12mp-apple
+  </pre>
+  <h4>Código de Rastreamento: AS006969610LO</h4>
+  <div id='loading'>
+    <p>Aguarde, carregando os dados de rastreio…<p>
+    <img src="200.gif" alt="">
+  </div>
+  <table id='details'>
+    <thead>
+      <tr>
+        <td>Data/Hora</td>
+        <td>Evento</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20/10/2020 - 07:34:12</td>
+        <td>Seu pedido foi encaminhado para a transportadora</td>
+      </tr>
+      <tr>
+        <td>20/10/2020 - 07:49:02</td>
+        <td>
+          Seu pedido chegou nas instalações da transportadora <br>
+          São Paulo, SP — BR
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    setTimeout(function(){
+      document.body.style.removeProperty('display')
+      setTimeout(function(){
+        document.getElementById('details').style.display = 'table'
+        document.getElementById('loading').style.display = 'none'
+      }, Math.random() * 2 * 1000)
+    }, Math.random() * 10 * 1000)
+  </script>
+</body>
+</html>
